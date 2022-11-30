@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    color: #3C3C3C;
+    width: 100%;
+    max-width: 1440px;
+    max-height: 1173px;
+    margin: 0 auto;
+    transition: all .1s ease-in;
+}
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.header__nav {
+    max-width: 417px;
+    height: 24px;
+}
+.nav__list {
+    display: flex;
+    gap: 30px;
+    cursor:pointer;
+}
+.header__logo {
+    margin: 10px 206px 10px 135px;
+    cursor:pointer;
+}
+.nav__list-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3C3C3C;
+}
+.header__btn-callback {
+    border: 1px solid #3C3C3C;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin: 19px 136px 19px 246px;
+    padding: 10px 20px;
+    color: #3C3C3C;
+    cursor:pointer;
+}
+.nav__list-link:hover {
+    color: #18B5DC;
+}
+.header__btn-callback:hover {
+    background: #18B5DC;
+    border: 1px solid #18B5DC;
+    color: #FFFFFF;
+}
+.main {
+    background: #F6F6F6;
+    height: 833px;
+    text-align: center;
+    width: 100%;
+    max-width: 1440px;
+}
+.main__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    letter-spacing: 0.13em;
+    padding: 150px 0 64px 0;
+}
+.main_pretitle {
+    width: 570px;
+    height: 42px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.main__foto-block {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: 135px;
+}
+.foto-block__team-item {
+    height: 333px;
+    width: 270px;
+    cursor:pointer;
+}
+p, h2 {
+    width: 170px;
+    height: 21.46px;
+    text-align: left;
+    color: #282528;
+}
+h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 20px;
+}
+a {
+    text-decoration: none;
+}
+.foto-block__team-item--no-foto {
+    background: #18B5DC;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+.foto-block__team-item--link {
+    color: #FFFFFF;
+}
+.foto-block__team-item--link:hover {
+    color:#5DCBE6;
+}
+.foto-block:hover > .foto-block-rect {
+    fill:#FFFFFF; 
+}
+.foto-block__team-item--John-Handson, .foto-block__team-item--Alex-Cutter, .foto-block__team-item--Elena-Simpson, .foto-block__team-item--Lily-Allen {
+    opacity: 0;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+}
+.foto-block__team-item--John {
+    background-image: url("./image/photo_alex.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.foto-block__team-item--John:hover > .foto-block__team-item--John-Handson  {
+    opacity: 1;
+    background: #18B5DC;
+}
+.foto-block__team-item--alex {
+    background-image: url("./image/photo_alex.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.foto-block__team-item--alex:hover > .foto-block__team-item--Alex-Cutter {
+    opacity: 1;
+    background: #18B5DC;
+}
+.foto-block__team-item--elena {
+    background-image: url("./image/photo_elena.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.foto-block__team-item--elena:hover > .foto-block__team-item--Elena-Simpson  {
+    opacity: 1;
+    background: #18B5DC;
+}
+.foto-block__team-item--lily {
+    background-image: url("./image/photo_lily.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.foto-block__team-item--lily:hover > .foto-block__team-item--Lily-Allen {
+    opacity: 1;
+    background: #18B5DC;
+}
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    height: 260px;
+    margin: 0 auto;
+}
+.footer__logo {
+   display: block;
+   text-align: center;
+   padding: 40px 0 28px 0;
+}
+.footer__nav {
+    width: 384px;
+    height: 22px;
+    display: block;
+    margin: 0 auto;
+}
+.footer__nav--list-link {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #3C3C3C;
+}
+.footer__nav--list-link:hover {
+    color: #18B5DC;
+}
+.footer__social {
+    width: 250px;
+    height: 42px;
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    padding: 28px 0 40px 0;
+}
+.footer__social--icon {
+    color: #18B5DC;
+}
+.footer__social--icon:hover {
+    color: #FFFFFF;
+}
+.social_icon:hover > .social_icon-rect {
+    fill:#18B5DC;
+}
