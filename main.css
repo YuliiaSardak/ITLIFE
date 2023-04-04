@@ -1,12 +1,10 @@
 *{
     box-sizing: border-box;
+    transition: all .1s ease-in;
 }
 body {
     font-family: 'Lato', sans-serif;
     color: #3C3C3C;
-    width: 100%;
-    max-width: 1440px;
-    max-height: 1173px;
     margin: 0 auto;
     transition: all .1s ease-in;
 }
@@ -14,6 +12,7 @@ body {
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .header__nav {
     max-width: 417px;
@@ -23,6 +22,7 @@ body {
     display: flex;
     gap: 30px;
     cursor:pointer;
+    justify-content: center;
 }
 .header__logo {
     margin: 10px 206px 10px 135px;
@@ -58,8 +58,7 @@ body {
     background: #F6F6F6;
     height: 833px;
     text-align: center;
-    width: 100%;
-    max-width: 1440px;
+
 }
 .main__title {
     font-weight: 700;
@@ -76,13 +75,12 @@ body {
     line-height: 24px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 60px;
 }
 .main__foto-block {
     display: flex;
     gap: 30px;
     align-items: center;
-    margin-left: 135px;
+    justify-content: center;
 }
 .foto-block__team-item {
     height: 333px;
@@ -124,54 +122,71 @@ a {
 }
 .foto-block__team-item--John-Handson, .foto-block__team-item--Alex-Cutter, .foto-block__team-item--Elena-Simpson, .foto-block__team-item--Lily-Allen {
     opacity: 0;
-    width: 270px;
-    height: 270px;
+    max-width: 270px;
+    width: 100%;
+    max-height: 270px;
+    height: 100%;
     display: flex;
     align-items: center;
     gap: 4px;
     justify-content: center;
 }
 .foto-block__team-item--John {
-    background-image: url("./image/photo_alex.jpg");
+    background-image: url("./image/photo_john.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 270px;
+    height: 270px;
+    margin-top: 70px;
+
 }
 .foto-block__team-item--John:hover > .foto-block__team-item--John-Handson  {
     opacity: 1;
     background: #18B5DC;
+    transform: scale(1.1);
 }
 .foto-block__team-item--alex {
     background-image: url("./image/photo_alex.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 270px;
+    height: 270px;
+    margin-top: 70px;
 }
 .foto-block__team-item--alex:hover > .foto-block__team-item--Alex-Cutter {
     opacity: 1;
     background: #18B5DC;
+    transform: scale(1.1);
 }
 .foto-block__team-item--elena {
     background-image: url("./image/photo_elena.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 270px;
+    height: 270px;
+    margin-top: 70px;
 }
 .foto-block__team-item--elena:hover > .foto-block__team-item--Elena-Simpson  {
     opacity: 1;
     background: #18B5DC;
+    transform: scale(1.1);
 }
 .foto-block__team-item--lily {
     background-image: url("./image/photo_lily.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 270px;
+    height: 270px;
+    margin-top: 70px;
 }
 .foto-block__team-item--lily:hover > .foto-block__team-item--Lily-Allen {
     opacity: 1;
     background: #18B5DC;
+    transform: scale(1.1);
 }
 .footer {
-    width: 100%;
-    max-width: 1440px;
-    height: 260px;
-    margin: 0 auto;
+    height: 320px;
+    margin: 60px auto;
 }
 .footer__logo {
    display: block;
@@ -179,8 +194,6 @@ a {
    padding: 40px 0 28px 0;
 }
 .footer__nav {
-    width: 384px;
-    height: 22px;
     display: block;
     margin: 0 auto;
 }
@@ -209,4 +222,64 @@ a {
 }
 .social_icon:hover > .social_icon-rect {
     fill:#18B5DC;
+}
+
+@media (max-width: 766px) {
+    .main__foto-block {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .main {
+        height: auto;
+    }
+    .header{
+        flex-direction: column;
+        margin: 50px;
+        height: auto;
+    }
+    .header__logo {
+        margin: 0 auto;
+    }
+    .header__nav {
+        height: auto;
+    }
+    .nav__list{
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px auto;
+        align-items: center;
+    }
+    .header__btn-callback {
+        margin: 0;
+    }
+    .main__title {
+        padding: 10px;
+    }
+    .main_pretitle {
+        width: 300px;
+    }
+
+}
+@media (max-width: 1000px) {
+    .main__foto-block {
+        gap: 10px;
+    }
+    .foto-block__team-item--lily:hover > .foto-block__team-item--Lily-Allen,
+    .foto-block__team-item--elena:hover > .foto-block__team-item--Elena-Simpson,
+    .foto-block__team-item--alex:hover > .foto-block__team-item--Alex-Cutter,
+    .foto-block__team-item--John:hover > .foto-block__team-item--John-Handson {
+        transform: scale(1);
+    }
+}
+@media (max-width: 1200px) {
+    .header__btn-callback {
+        margin: 19px 15px 19px 15px;
+    }
+    .header__logo {
+        margin: 10px 15px 10px 15px;
+    }
+    .main__foto-block {
+        padding: 15px;
+    }
+
 }
